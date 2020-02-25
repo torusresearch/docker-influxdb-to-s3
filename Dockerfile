@@ -1,5 +1,5 @@
-FROM influxdb:1.0-alpine
-MAINTAINER Jacob Tomlinson <jacob@tom.linson.uk>
+FROM influxdb:latest
+MAINTAINER Kanishka <kanishkatn@gmail.com>
 
 # Install system dependancies
 RUN apk add --no-cache bash py-pip && rm -rf /var/cache/apk/*
