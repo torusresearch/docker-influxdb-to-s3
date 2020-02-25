@@ -1,4 +1,4 @@
-FROM influxdb:latest-alpine
+FROM influxdb:alpine
 MAINTAINER Kanishka <kanishkatn@gmail.com>
 
 # Install system dependancies
