@@ -23,7 +23,8 @@ export DATETIME=$(date "+%Y%m%d%H%M%S")
 # Add this script to the crontab and start crond
 cron() {
   echo "Starting backup cron job with frequency '$1'"
-  echo "$1 $0 backup" > /var/spool/cron/crontabs/root
+  echo "$1 $0 backup >> /var/log/backup.log 2>&1" > /var/spool/cron/crontabs/root
+  crontab /var/spool/cron/crontabs/root
   crond -f
 }
 
