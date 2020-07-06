@@ -67,6 +67,10 @@ backup() {
     exit 1
   fi
 
+  # Cleanup backups from disk
+  rm $BACKUP_ARCHIVE_PATH
+  rm -rf $BACKUP_PATH
+
   echo "Done"
 }
 
