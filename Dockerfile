@@ -1,7 +1,7 @@
 FROM influxdb:alpine
 
 # Install system dependancies
-RUN apk add --no-cache bash py-pip && rm -rf /var/cache/apk/*
+RUN apk add --no-cache bash py-pip coreutils && rm -rf /var/cache/apk/*
 
 # Install aws cli
 RUN pip --no-cache-dir install awscli
